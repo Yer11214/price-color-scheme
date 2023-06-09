@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# price-color-scheme
-A easy format price component
-=======
 # Price Color Scheme
 
 一个简单使用的价格格式化组件
@@ -50,4 +46,3 @@ export default {
 | dot     | 金额的符号     | String           | ""     | 否       |
 | color | 默认金额颜色。 | String           | ""     | 否       |
 | customStyle | 自定义样式 | Object           | ""     | 否       |
->>>>>>> ffe27573192c45d9920f14765d9d9fe757c05228
