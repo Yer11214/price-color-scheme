@@ -1,7 +1,5 @@
 // 导入组件
 import priceColorScheme from "./price-color-scheme.vue";
-
-
 const install = function (Vue) {
   if (install.installed) return (install.installed = true);
   Vue.component(priceColorScheme.name, priceColorScheme);
@@ -9,5 +7,4 @@ const install = function (Vue) {
 if (typeof window !== "undefined" && window.Vue) {
   install(window.Vue);
 }
-console.log(install)
 export default install;

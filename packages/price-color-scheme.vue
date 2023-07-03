@@ -14,7 +14,7 @@ export default {
     // 金额
     value: {
       type: [Number, String],
-      default:0,
+      default: 0,
       required: true,
     },
     // 货币单位
@@ -34,7 +34,7 @@ export default {
     },
     customStyle: {
       type: Object,
-      default: () => {},
+      default: () => { },
     },
   },
   beforeCreate() {
@@ -53,10 +53,12 @@ export default {
         val === "null" ||
         val === null ||
         val === undefined ||
-        val === "undefined"
-      )
-        return 0.0;
-      let price = that.formatPrice(val);
+        val === "undefined" || val === ''
+      ){
+        return `${this.unit}0.00`;
+      }
+      else{
+        let price = that.formatPrice(val);
       if (location === "before") {
         return price.substr(0, price.length - 3);
       }
@@ -64,6 +66,8 @@ export default {
         return price.substr(-2);
       }
       return (unit || "") + price;
+      }
+      
     },
   },
 
@@ -74,7 +78,6 @@ export default {
      * @returns {string}
      */
     formatPrice(price) {
-      if (typeof price !== "number") return price;
       return String(Number(price).toFixed(2)).replace(
         /\B(?=(\d{3})+(?!\d))/g,
         ","

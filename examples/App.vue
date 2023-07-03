@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-      <priceColorScheme :value="100" ></priceColorScheme>
+      <priceColorScheme value="0" ></priceColorScheme>
+      <priceColorScheme value="1" ></priceColorScheme>
+      <priceColorScheme :value="undefined" ></priceColorScheme>
       <priceColorScheme :value="100" dot="+" ></priceColorScheme>
       <priceColorScheme :value="100" dot="-" color="#32cc"  :customStyle="{fontSize:'20px'}"></priceColorScheme>
       <priceColorScheme :value="100" dot="~"  color="green"> 啊 这么多钱 ？ </priceColorScheme>

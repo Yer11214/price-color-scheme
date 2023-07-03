@@ -1,6 +1,6 @@
 {
   "name": "price-color",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "一个简单使用的价格格式化组件",
   "main": "lib/index.umd.min.js",
   "private": false,
